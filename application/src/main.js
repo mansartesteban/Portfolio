@@ -1,5 +1,7 @@
 import "@/assets/styles/main.scss"
 
+import "vegaia-style/lib/vegaia-style.css"
+
 import { createApp } from 'vue'
 import App from './App.vue'
 
