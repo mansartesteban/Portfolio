@@ -1,11 +1,11 @@
 <template>
-    <div class="flex flex-column gap-2 pb-2">
+    <div class="flex flex-column align-items-center gap-2 pb-2">
         <h3>{{ title }}</h3>
-        <div class="grid gap-1">
+        <div class="grid gap-2">
 
             <template v-for="item of stack">
                 <a :href="item.href" target="_blank">
-                    <img :src="item.src" :alt="item.alt" :title="item.alt" width="32" height="32" />
+                    <img :src="item.src" :alt="item.alt" :title="item.alt" width="40" height="40" />
                 </a>
             </template>
         </div>
@@ -29,6 +29,6 @@ const props = defineProps({
 <style scoped>
 .grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(9, 1fr);
 }
 </style>
