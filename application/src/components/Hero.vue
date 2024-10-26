@@ -16,9 +16,12 @@ onMounted(() => {
         let splitted = [...props.text]
         splitted.forEach((char, i) => {
             let sym = document.createElement("span")
-            sym.classList.add("char")
+            sym.classList.add("char", "animate__animated", "animate__bounceInDown", "animate__faster")
             sym.style.setProperty("--index", i)
             sym.innerText = char
+            if (char === " ") {
+                sym.style.padding = "0 1rem"
+            }
             hero.value.appendChild(sym)
         })
     }
@@ -27,18 +30,13 @@ onMounted(() => {
 
 <style lang="scss">
 .hero {
-    font-size: 15vmin;
-    color: rgba(255, 255, 255, 1);
-    font-weight: 700;
-
-    letter-spacing: -2rem;
 
     .char {
-        backdrop-filter: blur(20px);
+        display: inline-block;
         z-index: var(--index);
-        text-shadow: .05ch .05ch .50ch rgba(154, 193, 193, 1);
-        position: relative;
-        // , 0 0 .15ch .20ch rgba(0, 0, 0, .05);
+        // text-shadow: .05ch .05ch .20ch rgba(0, 0, 0, .25);
+
+        animation-delay: calc(var(--index) * 50ms);
     }
 }
 </style>

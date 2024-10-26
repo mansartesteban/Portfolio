@@ -3,7 +3,6 @@ import path from "path"
 import AutoImport from 'unplugin-auto-import/vite'
 import Vue from '@vitejs/plugin-vue'
 import Component from "unplugin-vue-components/vite"
-
 const root = path.resolve(__dirname)
 
 export default defineConfig({
@@ -14,12 +13,17 @@ export default defineConfig({
                 "vue",
             ]
         }),
-        Component()
+        Component({
+            extensions: ["vue"],
+            include: [/\.vue$/, /\.vue\?vue/],
+        }),
+
+
     ],
+    assetsInclude: ["**/*.md"],
     build: {
         outDir: "../"
     },
-    // root: path.resolve(__dirname, "src"),
     resolve: {
         alias: {
             "@": path.join(root, "src"),
@@ -32,12 +36,5 @@ export default defineConfig({
             }
         }
     },
-    module: {
-        rules: [
-            {
-                test: /\.scss$/,
-                use: ["style-loader", "css-loader", "sass-loader"],
-            },
-        ],
-    },
+
 })

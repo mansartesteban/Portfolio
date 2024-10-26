@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Oitfit';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(@/assets/fonts/Outfit.ttf) format('true-type');
+    }
+}
+
+
+.text-primary {
+    color: #FFA633;
+    background-image: linear-gradient(0deg, #FF5733, #FF7F33, #FFA633, #FFD333, #FFE633);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
