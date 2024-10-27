@@ -24,19 +24,3 @@
 .blur-4xl {
     filter: blur(80px);
 }
-
-@keyframes opacity {
-
-    from,
-    to {
-        opacity: .3;
-    }
-
-    50% {
-        opacity: .15;
-    }
-}
-
-.animate-opacity {
-    animation: opacity 8s ease-in-out;
-}
