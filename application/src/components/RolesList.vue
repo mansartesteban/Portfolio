@@ -4,6 +4,8 @@
 
 <script setup>
 
+import { randomNumber } from '@/utils/Algebra'
+
 const text = ref("")
 const typing = ref(false)
 
@@ -15,11 +17,12 @@ const words = [
     "rigoureux",
     "expérimenté",
     "sérieux",
-
+    "rêveur",
+    "photographe",
     "un peu bête.",
 ]
 
-const randomNumber = (min, max) => Math.random() * (max - min) + min
+
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 
 const animate = async (index = 0) => {

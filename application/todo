@@ -7,9 +7,25 @@
         - selection
         - quick
     - Animations css
+    - Librairie de "guide"
+        - En vue et vanilla js
+        - Permet d'afficher des bulles d'info sur des éléments avec des étapes + dismiss
     - Courbes bezier
         - Visualiser de courbes de bezier polnomiales de degré n
+    - Mes liens utils (librairies, outils, générateurs etc...)
+- Blog
+    - Articles
+        - Avoir un meilleur profil linkedin
+        - histoire.dev
+        - faire une pwa
+        - 
+- Projets
+    - Continuer l'application de père noel
+    - Continuer l'application Walletaya
+    - Faire le jeu 2D idle/inc game
+    - Documentation nibe-lib
+    - Interface d'accueil GTP
 
-https://typebot.io/?utm_source=litebadge
-https://antonyjudeshaman.vercel.app/
-https://www.youtube.com/watch?v=fQSe12G5eEU&list=PLNYkxOF6rcICM3ttukz9x5LCNOHfWBVnn&index=2
+# https://typebot.io/?utm_source=litebadge
+# https://antonyjudeshaman.vercel.app/
+# https://www.youtube.com/watch?v=fQSe12G5eEU&list=PLNYkxOF6rcICM3ttukz9x5LCNOHfWBVnn&index=2
