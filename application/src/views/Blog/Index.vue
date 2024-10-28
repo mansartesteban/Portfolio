@@ -25,6 +25,9 @@ const articles = ref(Array(4).fill([
         title: "Améliorer votre profil Github",
         subtitle: "Débutant",
         markdown: Article1
-    }
+    },
+    // {
+    //     title: ""
+    // }
 ]).flat())
 </script>

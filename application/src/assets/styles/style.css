@@ -20,7 +20,3 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-.blur-4xl {
-    filter: blur(80px);
-}

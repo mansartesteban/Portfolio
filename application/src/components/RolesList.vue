@@ -14,6 +14,7 @@ const words = [
     "passionné",
     "curieux",
     "intégrateur",
+    "heureux",
     "rigoureux",
     "expérimenté",
     "sérieux",

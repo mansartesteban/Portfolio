@@ -1,14 +1,15 @@
 <template>
     <div class="">
-        <div class="animated-background rounded-full animate-opacity blur-4xl absolute  bg-yellow-500 ">
+
+        <div class="fixed ease-in-out animated-background rounded-full animate-opacity blur-yellow ">
         </div>
-        <div class="animated-background rounded-full animate-opacity blur-4xl absolute  bg-red-500 ">
+        <div class="fixed ease-in-out animated-background rounded-full animate-opacity blur-red ">
         </div>
-        <div class="animated-background rounded-full animate-opacity blur-4xl absolute  bg-purple-500">
+        <div class="fixed ease-in-out animated-background rounded-full animate-opacity blur-purple">
         </div>
-        <div class="animated-background rounded-full animate-opacity blur-4xl absolute  bg-green-500">
+        <div class="fixed ease-in-out animated-background rounded-full animate-opacity blur-green">
         </div>
-        <div class="animated-background rounded-full animate-opacity blur-4xl absolute  bg-blue-500">
+        <div class="fixed ease-in-out animated-background rounded-full animate-opacity blur-blue">
         </div>
     </div>
 </template>
@@ -42,13 +43,10 @@ const animateBackground = async (elem) => {
         attributes.top = randomNumber(padding, windowSize.y - size - padding)
         attributes.left = randomNumber(padding, windowSize.x - size - padding)
 
-        attributes.bottom = windowSize.y - attributes.top - size
-        attributes.right = windowSize.x - attributes.left - size
-
-        elem.style.top = `${attributes.top}px`
-        elem.style.bottom = `${attributes.bottom}px`
-        elem.style.left = `${attributes.left}px`
-        elem.style.right = `${attributes.right}px`
+        elem.style.top = `${attributes.top - size / 2}px`
+        elem.style.left = `${attributes.left - size / 2}px`
+        elem.style.width = `${size * 2}px`
+        elem.style.height = `${size * 2}px`
 
         let nextAnimationIn = randomNumber(2000, 5000)
 
@@ -68,25 +66,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.animated-background {
-    transition:
-        top 4s cubic-bezier(.33, 0, .66, 1),
-        bottom 4s cubic-bezier(.33, 0, .66, 1),
-        left 4s cubic-bezier(.33, 0, .66, 1),
-        right 4s cubic-bezier(.33, 0, .66, 1);
-}
-
-.animate::before {
-    --padding: -10px;
-    content: "";
-    position: absolute;
-    top: var(--padding);
-    left: var(--padding);
-    right: var(--padding);
-    bottom: var(--padding);
-    border: 3px dashed red;
-}
-
 @keyframes opacity {
 
     from,
@@ -100,6 +79,26 @@ onMounted(() => {
 }
 
 .animate-opacity {
-    animation: opacity 7s ease-in-out infinite;
+    animation: 5s ease-in-out opacity infinite;
+}
+
+.blur-red {
+    background: radial-gradient(farthest-side, rgb(255, 0, 0), transparent);
+}
+
+.blur-green {
+    background: radial-gradient(farthest-side, rgb(0, 255, 0), transparent);
+}
+
+.blur-yellow {
+    background: radial-gradient(farthest-side, rgb(255, 255, 0), transparent);
+}
+
+.blur-blue {
+    background: radial-gradient(farthest-side, rgb(0, 0, 255), transparent);
+}
+
+.blur-purple {
+    background: radial-gradient(farthest-side, rgb(255, 0, 255), transparent);
 }
 </style>

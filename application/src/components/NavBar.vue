@@ -1,25 +1,26 @@
 <template>
-    <nav class="text-white" :class="{ opened: !closed }">
-        <div class="fixed lg:hidden top-8 right-8 z-10 fill-white" @click="closed = !closed">
+    <nav :class="{ opened: !closed }">
+        <div class="fixed lg:hidden top-8 right-8 stroke-gray-900 dark:stroke-gray-200" @click="closed = !closed">
             <svg id="hamburger" class="Header__toggle-svg" viewbox="0 0 60 40" width="52" height="34">
-                <g stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <g stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
                     <path id="top-line" d="M10,10 L50,10 Z"></path>
                     <path id="middle-line" d="M10,20 L50,20 Z"></path>
                     <path id="bottom-line" d="M10,30 L50,30 Z"></path>
                 </g>
             </svg>
         </div>
-        <ul class="fixed lg:hidden flex flex-col items-center gap-8 right-0 top-0 p-8 bg-gray-800 w-full z-0 drop-shadow-xl"
+        <ul id="menu"
+            class="fixed lg:hidden flex flex-col items-center gap-8 right-0 top-0 p-8 bg-gray-200 dark:bg-gray-800 w-full drop-shadow-xl"
             :class="closed ? 'closed' : 'opened'">
             <router-link v-for="(link, i) in navLinks" :to="link.to" class="animate__animated"
                 :class="{ 'animate__mySlideInRight': !closed, 'animate__mySlideInLeft': closed }"
-                :style="`animation-delay: ${i * 100 + 200}ms;`">
+                :style="`animation-delay: ${i * 100 + 200}ms;`" @click="closed = true">
                 <li>{{
                     link.title }}</li>
             </router-link>
         </ul>
-        <ul class="hidden lg:flex flex items-center gap-8 p-8  " :class="closed ? 'closed' : 'opened'">
-            <router-link v-for="link in navLinks" :to="link.to">
+        <ul class="hidden lg:flex flex items-center gap-8 p-2  " :class="closed ? 'closed' : 'opened'">
+            <router-link v-for="link in navLinks" :to="link.to" @click="closed = true">
                 <li>{{ link.title }}</li>
             </router-link>
         </ul>
@@ -27,6 +28,10 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
+
+import { onClickOutside } from '@vueuse/core'
+
 const closed = ref(true)
 const navLinks = ref([
     {
@@ -35,11 +40,7 @@ const navLinks = ref([
     },
     {
         title: "Expériences",
-        to: "/"
-    },
-    {
-        title: "Formations",
-        to: "/"
+        to: "/career"
     },
     {
         title: "Projet",
@@ -59,6 +60,8 @@ const navLinks = ref([
     }
 ])
 
+
+onMounted(() => onClickOutside(document.querySelector('#menu'), () => closed.value = !closed.value ? true : closed.value))
 </script>
 
 <style scoped>
@@ -98,6 +101,7 @@ nav.opened svg {
 }
 
 ul {
+    will-change: top;
     transition: top .5s ease-in-out;
     top: 0;
 }
