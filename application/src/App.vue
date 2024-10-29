@@ -2,25 +2,19 @@
   <div
     class="fixed w-full h-1 bg-red-500 sm:bg-orange-500 md:bg-yellow-500 lg:bg-lime-500 xl:bg-green-500 2xl:bg-teal-500">
   </div>
-  <main
-    class="static text-gray-900 dark:text-gray-200 overflow-x-hidden flex flex-col bg-slate-300 dark:bg-gray-900	min-h-screen p-8 md:p-10 lg:p-12 gap-16">
+  <div class="static text-gray-900 dark:text-gray-200  flex flex-col bg-slate-300 dark:bg-gray-900 min-h-screen ">
 
-    <header class="flex items-center px-0 md:px-4 lg:px-6 xl:px-8 z-10">
-      <h1 class="text-2xl font-medium">Vegaia</h1>
-      <div class="flex-1"></div>
-      <NavBar></NavBar>
-    </header>
+    <AppHeader></AppHeader>
 
-    <div>
+    <main class="mt-24 p-8 md:p-10 lg:p-12 gap-16 ">
       <router-view></router-view>
-    </div>
+    </main>
     <footer class="section"></footer>
-  </main>
+  </div>
 </template>
 
 <script setup>
-import NavBar from '@/components/NavBar.vue';
-
+import AppHeader from '@/components/AppHeader.vue'
 
 </script>
 

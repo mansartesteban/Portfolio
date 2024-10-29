@@ -1,12 +1,13 @@
 <template>
-    <div class="flex flex-col items-center gap-8 ">
-        <h3 class="text-2xl text-center">{{ title }}</h3>
-        <div class="flex flex-wrap items-center justify-center gap-4">
+    <div class="flex flex-col items-center gap-16 ">
+        <h3 class="text-3xl text-center">{{ title }}</h3>
+        <div class="flex flex-wrap items-center justify-center gap-8">
 
             <template v-for="(item, i) of stack">
                 <a :href="item.href" target="_blank" class="animate__animated animate__backInUp"
                     :style="`animation-delay:${i * 30}ms`">
-                    <img :src="item.src" :alt="item.alt" :title="item.alt" width="40" height="40" />
+                    <img class="drop-shadow-xl" :src="item.src" :alt="item.alt" :title="item.alt" width="40"
+                        height="40" />
                 </a>
             </template>
         </div>
