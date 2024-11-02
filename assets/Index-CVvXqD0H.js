@@ -1,0 +1,1 @@
+import{c as o,h as t,o as c,j as r}from"./index-CIfq3W2K.js";const s={class:"blog flex flex-col gap-16 p-4 h-full flex-1"},p={__name:"Index",setup(n){return(a,l)=>{const e=r("router-view");return c(),o("div",s,[t(e)])}}};export{p as default};
