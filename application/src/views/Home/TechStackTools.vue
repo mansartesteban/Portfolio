@@ -1,9 +1,9 @@
 <template>
-  <TechStack title="Collaboration et création" :stack="stack"></TechStack>
+  <TechStack title="Outils" :stack="stack"></TechStack>
 </template>
 
 <script setup>
-import "@/components/TechStack.vue"
+import TechStack from "@/views/Home/TechStack.vue"
 
 const stack = [
   {
@@ -45,6 +45,11 @@ const stack = [
     alt: "font awesome",
     href: "https://fontawesome.com",
     src: "https://www.vectorlogo.zone/logos/font-awesome/font-awesome-icon.svg",
+  },
+  {
+    alt: "zero height",
+    src: "https://raw.githubusercontent.com/gilbarbara/logos/92bb74e98bca1ea1ad794442676ebc4e75038adc/logos/zeroheight-icon.svg",
+    href: "https://zeroheight.com",
   },
   {
     alt: "plane",

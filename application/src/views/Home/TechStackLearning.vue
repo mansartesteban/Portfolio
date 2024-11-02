@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import "@/components/TechStack.vue"
+import TechStack from "@/views/Home/TechStack.vue"
 
 const stack = [
   {

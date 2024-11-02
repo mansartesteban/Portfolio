@@ -7,7 +7,7 @@ export default {
     // darkMode: "selector",
     theme: {
         fontFamily: {
-            sans: ["Outfit"]
+            sans: ["FiraSans"]
         }
     },
     plugins: [],
