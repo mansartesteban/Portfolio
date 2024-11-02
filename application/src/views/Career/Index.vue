@@ -29,7 +29,7 @@ const experiences = ref([
         content: "Chez Nibelis, j'ai intégré l'équipe Innovation, dédiée à une transition technologique majeure. Les défis et obstacles rencontrés ont nourri mon ambition d'aller toujours plus loin pour concevoir des solutions plus modernes et intuitives. J'ai également eu l'occasion de collaborer avec des personnes dont l'approche a renforcé mon envie de progresser et de perfectionner mes compétences.",
         subitems: [
             "Développement d'un outil de documentation semi-automatisée sur mesure",
-            "Développement d'une framework vue interne à destination des équipes d'intégrateurs",
+            "Développement d'un framework vue interne à destination des équipes internes d'intégrateurs",
         ],
         link: "https://nibelis.com/",
         dateFrom: "Décembre 2022",

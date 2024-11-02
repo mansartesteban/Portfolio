@@ -1,43 +1,41 @@
 
-export default (mountOn = "body") => {
+export default (element, targetPosition) => {
     let position = {
         x: 0,
         y: 0
     }
-    let mouse = {
+    let target = {
         x: 0,
         y: 0
     }
 
-    if (!(mountOn instanceof Element)) {
-        mountOn = document.querySelector(mountOn)
+    if (!targetPosition) {
+        window.addEventListener("mousemove", (e) => {
+            newTarget(e.clientX, e.clientY)
+        })
+    } else {
+        newTarget(targetPosition.clientX, targetPosition.clientY)
     }
-
-    let movingElement = document.createElement("div")
-    movingElement.classList.add("mouse-interactor")
-
-    mountOn.appendChild(movingElement)
-
-    window.addEventListener("mousemove", (e) => {
-        mouse.x = e.clientX
-        mouse.y = e.clientY
-    })
 
 
     const loop = () => {
         let factor = .02
 
-        position.x = position.x * (1 - factor) + mouse.x * factor
-        position.y = position.y * (1 - factor) + mouse.y * factor
-        movingElement.style.top = `${position.y}px`
-        movingElement.style.left = `${position.x}px`
+        position.x = position.x * (1 - factor) + target.x * factor
+        position.y = position.y * (1 - factor) + target.y * factor
+        element.style.top = `${position.y}px`
+        element.style.left = `${position.x}px`
 
-        console.log("in loop")
         window.requestAnimationFrame(loop)
     }
     loop()
 
 
-    // return 
+    const newTarget = (x, y) => {
+        target.x = x
+        target.y = y
+    }
+
+    return { newTarget }
 
 }

@@ -24,8 +24,9 @@
             <div class="text-lg font-bold title mt-4 mb-2 text-slate-500">{{ item.subtitle }}</div>
             <div class="w-full">
                 <slot name="item-content" v-bind="{ item }"></slot>
-                <div v-if="item.subitems" class="mt-4 ml-4">
-                    <div v-for="subitem in item.subitems">
+                <div v-if="item.subitems" class="mt-4 ">
+                    <div class="font-bold my-4">Mes fiertés</div>
+                    <div v-for="subitem in item.subitems" class="ml-4">
                         <li>{{ subitem }}</li>
                     </div>
                 </div>

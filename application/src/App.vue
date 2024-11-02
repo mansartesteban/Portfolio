@@ -9,7 +9,7 @@
     <AppHeader></AppHeader>
 
 
-    <main class="mt-24 p-4 md:p-10 lg:p-12 gap-16 flex-1">
+    <main class="flex flex-col mt-24 p-4 md:p-10 lg:p-12 gap-16 flex-1">
       <router-view></router-view>
     </main>
     <AppFooter></AppFooter>

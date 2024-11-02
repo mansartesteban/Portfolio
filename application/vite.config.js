@@ -7,17 +7,15 @@ const root = path.resolve(__dirname)
 
 export default defineConfig({
     plugins: [
-        Vue(),
+        Vue({
+            include: [/\.vue$/]
+        }),
         AutoImport({
             imports: [
                 "vue",
             ]
         }),
-        Component({
-            extensions: ["vue"],
-            include: [/\.vue$/, /\.vue\?vue/],
-        }),
-
+        Component(),
 
     ],
     assetsInclude: ["**/*.md"],
