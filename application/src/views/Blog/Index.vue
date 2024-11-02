@@ -3,3 +3,7 @@
         <router-view></router-view>
     </div>
 </template>
+
+<script setup>
+// import
+</script>

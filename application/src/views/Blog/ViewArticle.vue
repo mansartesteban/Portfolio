@@ -70,14 +70,15 @@ const animateMagnify = () => {
 
 onMounted(() => {
     // useMouseInteractor(mouse.value)
-    animator.value = useMouseInteractor(magnify.value)
     if (articleFound.value) {
         fetch(articleFound.value.markdown)
             .then(response => response.text())
             .then(text => {
+                console.log("then?")
                 content.value = parse(text)
             })
     } else {
+        animator.value = useMouseInteractor(magnify.value)
         animateMagnify()
     }
 })

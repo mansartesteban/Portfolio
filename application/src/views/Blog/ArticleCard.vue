@@ -10,12 +10,15 @@
                 <div class="">{{ public }}</div>
             </div>
             <div class="line-clamp-3">{{ contentPreview }}</div>
-            <div class="bg-primary rounded-full text-white text-center px-4 py-2 mt-4">Voir l'article</div>
+            <div class="bg-primary rounded-full text-white text-center px-4 py-2 mt-4" @click="nav">Voir l'article</div>
         </div>
     </div>
 </template>
 
 <script setup>
+import slugify from '@sindresorhus/slugify'
+import { useRouter } from 'vue-router'
+
 const props = defineProps({
     title: String,
     date: Date,
@@ -25,4 +28,9 @@ const props = defineProps({
 })
 
 const formattedDate = computed(() => props.date.toUTCString())
+const router = useRouter()
+
+const nav = () => {
+    router.push("/blog/article/" + slugify(props.title))
+}
 </script>
