@@ -61,7 +61,7 @@ const navLinks = ref([
     // },
     {
         title: "Blog",
-        to: { name: 'blog' }
+        to: { name: 'ViewList' }
     },
     {
         title: "Contact",
