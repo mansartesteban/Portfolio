@@ -1,6 +1,6 @@
 {
   "name": "mansartesteban.github..io",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Esteban Mansart's Portfolio",
   "main": "main.js",
   "type": "module",
@@ -21,7 +21,6 @@
     "@sindresorhus/slugify": "^2.2.1",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vueuse/core": "^11.1.0",
-    "animate.css": "^4.1.1",
     "autoprefixer": "^10.4.20",
     "lenis": "^1.1.14",
     "marked": "^14.1.3",
