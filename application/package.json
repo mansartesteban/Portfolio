@@ -1,6 +1,6 @@
 {
   "name": "mansartesteban.github..io",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Esteban Mansart's Portfolio",
   "main": "main.js",
   "type": "module",
@@ -30,6 +30,7 @@
     "unplugin-vue-components": "^0.27.4",
     "unplugin-vue-markdown": "^0.26.2",
     "vegaia-style": "github:mansartesteban/vegaia-style",
+    "vite-plugin-vercel": "^9.0.3",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   }
