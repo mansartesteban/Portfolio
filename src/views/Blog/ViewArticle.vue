@@ -35,7 +35,7 @@ import useMouseInteractor from "../../composables/useMouseInteractor"
 
 const route = useRoute()
 const articleSlug = computed(() => route.path.split("/").pop())
-const articleFound = computed(() => articles.value.find(article => slugify(article.title) === articleSlug.value))
+const articleFound = computed(() => articles.find(article => slugify(article.title) === articleSlug.value))
 
 const content = ref("")
 

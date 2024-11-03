@@ -5,9 +5,15 @@
                 class=" asbolute text-center  text-xl font-bold rounded-xl h-[calc(10%)] bg-primary text-white -mx-12 md:-mx-16 p-4 md:p-6 lg:-mx-20 lg:p-8 lg:text-2xl">
                 {{ title }}</div>
             <div class="text-slate-500">{{ formattedDate }}</div>
-            <div class="flex items-center gap-2 text-slate-500">
-                <i class="mdi mdi-target-account"></i>
-                <div class="">{{ public }}</div>
+            <div class="flex flex-col gap-2">
+                <div class="flex items-center gap-2 text-slate-500">
+                    <i class="mdi mdi-target-account"></i>
+                    <div class="">{{ public }}</div>
+                </div>
+                <div class="flex items-center gap-2 text-slate-500">
+                    <i class="mdi mdi-target-account"></i>
+                    <div class="">{{ readTime }}</div>
+                </div>
             </div>
             <div class="line-clamp-3">{{ contentPreview }}</div>
             <div class="bg-primary cursor-pointer rounded-full text-white text-center px-4 py-2 mt-4" @click="nav">Voir
@@ -25,10 +31,12 @@ const props = defineProps({
     date: Date,
     public: String,
     contentPreview: String,
-    link: String
+    link: String,
+    readTime: String
 })
 
-const formattedDate = computed(() => props.date.toUTCString())
+const formatter = new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long' })
+const formattedDate = computed(() => formatter.format(props.date))
 const router = useRouter()
 
 const nav = () => {
