@@ -26,7 +26,7 @@ Pour plus de profils et d'exemples, je vous suggère [ce repository Github](http
 
 1) Pour commencer rendez-vous sur la page de [création d'un repository](https://github.com/new) sur Github.
 
-2) Créez un repository **public** du même nom que votre compte. Renseignez simplement le même nom que sur le menu "owner" ![](/src/assets/articles/article1/screen2.png)
+2) Créez un repository **public** du même nom que votre compte. Renseignez simplement le même nom que sur le menu "owner" ![](/articles/article1/screen2.png)
 
 3) Créez un fichier `README.md` à la racine de ce repository et personnalisez-le comme bon vous semble !
 
