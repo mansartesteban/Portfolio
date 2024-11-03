@@ -84,8 +84,8 @@ import StackShare from "@/assets/images/socials/stackshare.svg"
 import FlatIcon from "@/assets/images/socials/flaticon.svg"
 import LinkedIn from "@/assets/images/socials/linkedin.svg"
 
-import Illu1 from "@/assets/images/Illu1.webp"
-import Illu2 from "@/assets/images/Illu2.webp"
+import Illu1 from "@/assets/images/illu1.webp"
+import Illu2 from "@/assets/images/illu2.webp"
 
 const socials = [
     {
