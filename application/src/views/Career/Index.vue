@@ -13,8 +13,8 @@
 </template>
 
 <script setup>
-import Gtp from "@/assets/images/career/Gtp.svg"
-import Nibelis from "@/assets/images/career/Nibelis.png"
+import Gtp from "@/assets/images/career/gtp.svg"
+import Nibelis from "@/assets/images/career/nibelis.png"
 import Maxinfoweb from "@/assets/images/career/maxinfoweb.png"
 import Timeline from "./Timeline.vue"
 
