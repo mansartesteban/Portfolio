@@ -10,7 +10,8 @@
                 <div class="">{{ public }}</div>
             </div>
             <div class="line-clamp-3">{{ contentPreview }}</div>
-            <div class="bg-primary rounded-full text-white text-center px-4 py-2 mt-4" @click="nav">Voir l'article</div>
+            <div class="bg-primary cursor-pointer rounded-full text-white text-center px-4 py-2 mt-4" @click="nav">Voir
+                l'article</div>
         </div>
     </div>
 </template>
