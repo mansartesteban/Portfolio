@@ -1,1 +1,0 @@
-import{c as o,h as t,o as c,j as l}from"./index-L7H72u-K.js";const r={class:"blog flex flex-col gap-16 p-4 h-full flex-1 md:p-8 lg:p12 xl:p-16"},_={__name:"Index",setup(s){return(n,a)=>{const e=l("router-view");return c(),o("div",r,[t(e)])}}};export{_ as default};

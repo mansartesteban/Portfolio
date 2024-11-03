@@ -1,1 +1,0 @@
-import{_ as o,c,h as t,o as n,j as r}from"./index-NDUdYI_z.js";const s={},_={class:"blog flex flex-col gap-16 p-4 h-full flex-1"};function a(l,f){const e=r("router-view");return n(),c("div",_,[t(e)])}const d=o(s,[["render",a]]);export{d as default};
