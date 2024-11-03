@@ -22,9 +22,9 @@ export default defineConfig({
     ],
     publicDir: path.join(root, "src/assets"),
     assetsInclude: ["**/*.md"],
-    build: {
-        outDir: "../"
-    },
+    // build: {
+    //     outDir: "../"
+    // },
     resolve: {
         alias: {
             "@": path.join(root, "src"),
