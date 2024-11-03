@@ -9,6 +9,7 @@ export const articles = [
         readTime: "5 minutes",
         subtitle: "Débutant",
         markdown: Article1,
+        imagePreview: "/articles/article1/screen1.png",
         contentPreview: "Pour rendre votre profil GitHub plus attractif et professionnel, vous pouvez le personnaliser grâce à un fichier Markdown et des outils en ligne qui génèrent des images dynamiques, comme GitHub Readme Stats, Profile Trophy, et Shields.io, pour afficher vos statistiques et accomplissements de manière visuelle."
     },
     // {

@@ -2,7 +2,7 @@
 
 Si vous êtes développeur et que vous voulez gagner en visibilité, il est essentiel de soigner votre image et vos profils en ligne. Voyons ensemble comment rendre votre profil GitHub plus attrayant et professionnel.
 
-![](/src/assets/articles/article1/screen1.png)
+![](/articles/article1/screen1.png)
 
 ## Exemples
 
