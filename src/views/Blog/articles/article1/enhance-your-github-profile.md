@@ -2,11 +2,11 @@
 
 Si vous êtes développeur et que vous voulez gagner en visibilité, il est essentiel de soigner votre image et vos profils en ligne. Voyons ensemble comment rendre votre profil GitHub plus attrayant et professionnel.
 
+En parcourant GitHub, je suis tombé sur un profil qui a tout de suite attiré mon attention. En creusant un peu, j’ai découvert qu’il y avait plusieurs autres profils dans le même style. Leur secret ? Une présentation soignée grâce à un fichier Markdown totalement personnalisable. J'en ai donc profité pour appliquer ce principe à mon profil :
+
 ![](/articles/article1/screen1.png)
 
 ## Exemples
-
-En parcourant GitHub, je suis tombé sur un profil qui a tout de suite attiré mon attention. En creusant un peu, j’ai découvert qu’il y avait plusieurs autres profils dans le même style. Leur secret ? Une présentation soignée grâce à un fichier Markdown totalement personnalisable.
 
 Voici quelques exemple de profils Github "améliorés"
 

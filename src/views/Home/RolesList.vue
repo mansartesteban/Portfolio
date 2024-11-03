@@ -3,8 +3,7 @@
 </template>
 
 <script setup>
-
-import { randomNumber } from '@/utils/Algebra'
+import { randomNumber } from "@mansartesteban/utils"
 
 const text = ref("")
 const typing = ref(false)
@@ -50,7 +49,6 @@ onMounted(animate)
 
 <style scoped>
 .writer {
-
     border-right: .1em solid white;
 }
 

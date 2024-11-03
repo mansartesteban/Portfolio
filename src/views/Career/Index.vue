@@ -1,14 +1,10 @@
 <template>
     <div class="snap-proximity scroll-y-auto h-full ">
-        <!-- <div class="fixed top-0 left-0 opacity-20 h-screen">
-            <img class="h-full object-cover " :src="Back" alt="">
-        </div> -->
         <Timeline :items="experiences">
             <template #item-content="{ item }">
                 <p v-html="item.content"></p>
             </template>
         </Timeline>
-        <!-- <Experience v-for="experience in experiences" v-bind="experience"></Experience> -->
     </div>
 </template>
 
@@ -18,7 +14,7 @@ import Nibelis from "@/assets/images/career/nibelis.png"
 import Maxinfoweb from "@/assets/images/career/maxinfoweb.png"
 import Timeline from "./Timeline.vue"
 
-import { MapPinIcon } from '@heroicons/vue/16/solid'
+import { BriefcaseIcon } from '@heroicons/vue/16/solid'
 
 
 const experiences = ref([
@@ -34,7 +30,7 @@ const experiences = ref([
         link: "https://nibelis.com/",
         dateFrom: "Décembre 2022",
         dateTo: "",
-        icon: MapPinIcon
+        icon: BriefcaseIcon
     },
     {
         title: "GTP-Conseil",
@@ -48,7 +44,8 @@ const experiences = ref([
         ],
         link: "https://planete-online.fr/",
         dateFrom: "Mai 2019",
-        dateTo: "Novembre 2022"
+        dateTo: "Novembre 2022",
+        icon: BriefcaseIcon
     },
     {
         title: "Maxinfoweb",
@@ -62,7 +59,8 @@ const experiences = ref([
         ],
         link: "https://www.maxinfoweb.com/",
         dateFrom: "Février 2017",
-        dateTo: "Mai 2019"
+        dateTo: "Mai 2019",
+        icon: BriefcaseIcon
     },
 ])
 </script>

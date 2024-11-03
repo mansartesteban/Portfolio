@@ -10,7 +10,6 @@
             <h2 class="text-2xl font-bold">{{ title }}</h2>
             <span class="text-bold"></span>
             <span class="text-bold"></span>
-            <!-- <p>{{ content }}</p> -->
             <p v-html="content"></p>
         </div>
     </div>

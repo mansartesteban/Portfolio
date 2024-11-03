@@ -3,7 +3,7 @@
         <div
             class=" asbolute text-center text-xl font-bold rounded-xl bg-primary text-white -mx-4 mt-8 md:-mx-8 p-4 md:p-6 lg:-mx-12 lg:p-8 lg:text-2xl">
             {{ title }}</div>
-        <div class="flex flex-col lg:flex-row justify-between ">
+        <div class="flex flex-col lg:flex-row items-center">
             <img v-if="imagePreview" :src="imagePreview" class="lg:w-96 lg:m-8 rounded-xl">
             <div class="flex flex-col  gap-4 p-8 md:p-10 md:gap-6 lg:p-12 lg:gap-8">
                 <div class="flex flex-col gap-2">

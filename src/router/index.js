@@ -20,6 +20,7 @@ const routes = [
         ]
     },
     { path: '/career', name: "career", component: () => import("@/views/Career/Index.vue") },
+    { path: "/:pathMatch(.*)*", name: "NotFound", component: () => import("@/components/NotFoundComponent.vue") }
 ]
 
 const router = createRouter({

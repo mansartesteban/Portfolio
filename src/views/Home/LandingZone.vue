@@ -17,7 +17,7 @@
 <script setup>
 
 import { onMounted } from "vue"
-import { randomNumber } from "@/utils/Algebra"
+import { randomNumber } from "@mansartesteban/utils"
 
 
 const animateBackground = async (elem) => {
