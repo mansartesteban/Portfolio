@@ -13,16 +13,9 @@
 }
 
 :root {
-    --gradient-primary: linear-gradient(160deg, #ffc13b 0%, #fd3838 74%);
+    --gradient-primary: linear-gradient(175deg, #ffc13b 0%, #fd3838 74%);
 }
 
-.text-primary {
-    color: #FFA633;
-    background: var(--gradient-primary);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
 .line-clamp-1 {
     display: -webkit-box;
@@ -60,9 +53,7 @@ body {
     overflow-x: clip;
 }
 
-.bg-primary {
-    background: var(--gradient-primary);
-}
+
 
 @layer utilities {
     .slide-left {
@@ -164,5 +155,17 @@ body {
         src: url('@/assets/fonts/Fira/FiraSans-Black.ttf') format('truetype');
         font-weight: 900;
         font-style: normal;
+    }
+
+    .text-primary {
+        color: #FFA633;
+        background: var(--gradient-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .bg-primary {
+        background: var(--gradient-primary);
     }
 }

@@ -2,8 +2,8 @@
 
     <LandingZone></LandingZone>
 
-    <div class=" h-full flex flex-col items-center font-bold mx-8 my-10 sm:mx-10 sm:my-16 md:mx-14 md:my-20 gap-8">
-        <div class="text-4xl mt-24 md:text-5xl tracking-tight text-center animate__animated animate__fadeInLeft">
+    <div class=" h-[50vh] flex flex-col items-center font-bold mx-8 my-10 sm:mx-10 sm:my-16 md:mx-14 md:my-20 gap-8">
+        <div class="text-4xl md:text-5xl tracking-tight text-center animate__animated animate__fadeInLeft">
             Bonjour ! Je m'appelle
         </div>
         <h1
@@ -20,7 +20,7 @@
 
     </div>
 
-    <div class=" flex flex-col items-center py-20 transition-opacity duration-500 ease-in-out z-10"
+    <div class=" flex flex-col items-center transition-opacity duration-500 ease-in-out z-10 pt-8 pb-64"
         :class="hasScrolled ? 'opacity-0' : ''">
         <MouseScrollAnimation></MouseScrollAnimation>
     </div>

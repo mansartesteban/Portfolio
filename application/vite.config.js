@@ -18,6 +18,7 @@ export default defineConfig({
         Component(),
 
     ],
+    publicDir: path.join(root, "src/assets"),
     assetsInclude: ["**/*.md"],
     build: {
         outDir: "../"

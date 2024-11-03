@@ -1,4 +1,4 @@
-import Article1 from "./articles/enhance-your-github-profile.md"
+import Article1 from "./articles/article1/enhance-your-github-profile.md"
 
 export const articles = ref(Array(4).fill([
     {

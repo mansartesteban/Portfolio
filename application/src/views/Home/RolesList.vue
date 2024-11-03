@@ -1,5 +1,5 @@
 <template>
-    <span :class="['text-primary writer', { typing }]">{{ text }}</span>
+    <span :class="['text-primary writer font-semibold', { typing }]">{{ text }}</span>
 </template>
 
 <script setup>

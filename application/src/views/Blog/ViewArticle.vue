@@ -1,6 +1,6 @@
 <template>
     <template v-if="articleFound">
-        <div class="" v-html="content"></div>
+        <div class="markdown" v-html="content"></div>
     </template>
     <template v-else>
         <div class="h-full w-full flex flex-col items-center justify-center flex-1 gap-4">
@@ -11,15 +11,13 @@
             </div>
             <div class=" text-4xl">Cette page n'existe pas</div>
         </div>
-        <!-- <div ref="mouse"
-            class="hidden md:block fixed rounded-full h-64 w-64 backdrop-invert -translate-x-1/2 -translate-y-1/2">
-        </div> -->
+
         <div ref="magnify" class="fixed top-1/2 left-1/2 rounded-full h-96 w-96  -translate-x-1/2 -translate-y-1/2 "
             :style="{ left: `${position.x}px`, top: `${position.y}px` }">
             <div class="absolute bg-amber-800 w-24 h-full left-72 top-80 -rotate-45"
                 style="transform-origin: center top;"></div>
             <div
-                class="absolute backdrop-invert h-full w-full rounded-full outline-[3rem] outline outline-offset-1 outline-gray-400">
+                class="absolute backdrop-invert h-full w-full rounded-full outline-[3rem] outline -outline-offset-1 outline-gray-400">
             </div>
         </div>
     </template>
@@ -46,7 +44,6 @@ const position = ref({
     y: window.innerHeight / 2
 })
 
-// const mouse = ref();
 const magnify = ref()
 
 import { randomNumber } from "@/utils/Algebra"
@@ -69,12 +66,10 @@ const animateMagnify = () => {
 
 
 onMounted(() => {
-    // useMouseInteractor(mouse.value)
     if (articleFound.value) {
         fetch(articleFound.value.markdown)
             .then(response => response.text())
             .then(text => {
-                console.log("then?")
                 content.value = parse(text)
             })
     } else {
@@ -84,4 +79,36 @@ onMounted(() => {
 })
 </script>
 
-<style scoped></style>
+<style>
+.markdown h1 {
+    @apply text-3xl font-bold my-4
+}
+
+.markdown h2 {
+    @apply text-2xl font-black my-2
+}
+
+.markdown h3 {
+    @apply text-xl font-semibold my-1
+}
+
+.markdown p, .markdown ul {
+    @apply mb-4
+}
+
+.markdown ul li {
+    @apply list-disc ml-5
+}
+
+.markdown ol li {
+    @apply list-decimal ml-5
+}
+
+.markdown a {
+    @apply text-primary font-semibold
+}
+
+.markdown img {
+    @apply rounded-xl drop-shadow-xl
+}
+</style>
