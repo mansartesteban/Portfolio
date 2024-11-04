@@ -36,6 +36,10 @@
     - Courbes bezier
         - Visualiser de courbes de bezier polnomiales de degré n
     - Mes liens utils (librairies, outils, générateurs etc...)
+    - Mes librairies
+        - useHeightAnimation
+        - useLerpAnimation
+        - useVirtualScrollDynamic
 - Blog
     - Articles
         - Avoir un meilleur profil linkedin
@@ -57,6 +61,9 @@
 - Avoir une page "mes projets/envies"
     - Développer une extension chrome
     - Développer une extension VSCode
+    - Développer un chatbot
+    - Développer un algorythme génétique
+    - Développer un réseau de neurones
     
 
 # https://typebot.io/?utm_source=litebadge
