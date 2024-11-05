@@ -1,3 +1,21 @@
+# Todo
+
+- Renommer le repo vu que je n'utilise plus Github Pages
+- Ajouter un lien dans le Readme de profil vers le nouveau portfolio
+- Ajouter un lien sur LinkedIn vers le nouveau portfolio
+- Ajouter un lien sur Linktr.ee vers le nouveau portfolio 
+- Optimisation de la section "mes technologies" en mobile (probablement des images trop grosses je ne sais pas) 
+- Créer un deuxième article 
+- Améliorer le design de la section "expérience" 
+- Ajouter les dates de début et fin de poste dans la section "expériences" 
+- Trouver des meilleurs illustrations sur la page d'accueil pour les deux sections textuelles
+- Ajouter de l'animation en mobile sur la page d'acceuil pour les deux sections textuelles 
+- Corriger le bug d'animation de scroll sur la page accueil en breakpoint LG
+
+
+
+# Par la suite 
+
 - Avoir une section "outils"
     - Créateur de blob
     - Page "mes recommandations"
@@ -18,6 +36,11 @@
     - Courbes bezier
         - Visualiser de courbes de bezier polnomiales de degré n
     - Mes liens utils (librairies, outils, générateurs etc...)
+    - Mes librairies
+        - useHeightAnimation
+        - useLerpAnimation
+        - useVirtualScrollDynamic
+        - datatable léger et digne de ce nom
 - Blog
     - Articles
         OK - Avoir un meilleur profil github
@@ -40,6 +63,9 @@
 - Avoir une page "mes projets/envies"
     - Développer une extension chrome
     - Développer une extension VSCode
+    - Développer un chatbot
+    - Développer un algorythme génétique
+    - Développer un réseau de neurones
     
 
 # https://typebot.io/?utm_source=litebadge
