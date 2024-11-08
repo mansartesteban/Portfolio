@@ -13,9 +13,7 @@
         <h2
             class="text-center text-3xl font-light tracking-tight mt-8 md:mt-12 lg:mt-16 animate__animated animate__zoomIn animate__delay-2s">
             Je
-            suis&nbsp;
-            <div class="sm:inline-block"></div>
-            <RolesList></RolesList>
+            suis&nbsp;<RolesList></RolesList>
         </h2>
 
     </div>
@@ -84,8 +82,8 @@ import StackShare from "@/assets/images/socials/stackshare.svg"
 import FlatIcon from "@/assets/images/socials/flaticon.svg"
 import LinkedIn from "@/assets/images/socials/linkedin.svg"
 
-import Illu1 from "@/assets/images/illu1.webp"
-import Illu2 from "@/assets/images/illu2.webp"
+import Illu1 from "@/assets/images/illu3.svg"
+import Illu2 from "@/assets/images/illu4.svg"
 
 const socials = [
     {
