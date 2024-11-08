@@ -11,10 +11,10 @@
         </div>
 
 
-        <div class="relative flex flex-col rounded-xl bg-slate-700 mt-8 ml-4 lg:m-8 p-4 flex-1 transition-transform animate__animated animate__fadeInRight"
+        <div class="relative flex flex-col rounded-xl bg-slate-700 mt-8 ml-8 lg:m-8 p-4 flex-1 transition-transform animate__animated animate__fadeInRight"
             :class="index === 0 && 'border border-amber-400'" :style="`animation-delay: ${index * 700 + 500}ms`">
-            <div class="absolute bg-slate-700 w-4 h-4 top-4 -left-2 rotate-45 border-l border-b border-slate-700"
-                :class="index === 0 && ' border-amber-400'"></div>
+            <div class="absolute bg-slate-700 w-4 h-4 top-4 -left-2 rotate-45 border-l border-b "
+                :class="index === 0 ? 'border-amber-400' : 'border-slate-700'"></div>
             <div class="flex items-center justify-between">
                 <div class="flex flex-col">
                     <span class="text-xl font-bold title">{{ item.title }}</span>
