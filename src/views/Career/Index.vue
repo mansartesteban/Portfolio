@@ -16,6 +16,37 @@ import Timeline from "./Timeline.vue"
 
 import { BriefcaseIcon } from '@heroicons/vue/16/solid'
 
+function duration(startDate, endDate) {
+    if (startDate > endDate) {
+        console.error("Start date must be before end date")
+        return null
+    }
+    var startYear = startDate.getFullYear()
+    var startMonth = startDate.getMonth()
+    var startDay = startDate.getDate()
+
+    var endYear = endDate.getFullYear()
+    var endMonth = endDate.getMonth()
+    var endDay = endDate.getDate()
+
+    // We calculate February based on end year as it might be a leep year which might influence the number of days.
+    var february = (endYear % 4 == 0 && endYear % 100 != 0) || endYear % 400 == 0 ? 29 : 28
+    var daysOfMonth = [31, february, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+    var startDateNotPassedInEndYear = (endMonth < startMonth) || endMonth == startMonth && endDay < startDay
+    var years = endYear - startYear - (startDateNotPassedInEndYear ? 1 : 0)
+
+    var months = (12 + endMonth - startMonth - (endDay < startDay ? 1 : 0)) % 12
+
+    // (12 + …) % 12 makes sure index is always between 0 and 11
+    var days = startDay <= endDay ? endDay - startDay : daysOfMonth[(12 + endMonth - 1) % 12] - startDay + endDay
+
+    return {
+        years: years,
+        months: months,
+        days: days
+    }
+}
 
 const experiences = ref([
     {
@@ -29,7 +60,8 @@ const experiences = ref([
         ],
         link: "https://nibelis.com/",
         dateFrom: "Décembre 2022",
-        dateTo: "",
+        dateTo: "Aujourd'hui",
+        duration: duration(new Date("2022-12-01"), new Date()),
         icon: BriefcaseIcon
     },
     {
@@ -45,6 +77,7 @@ const experiences = ref([
         link: "https://planete-online.fr/",
         dateFrom: "Mai 2019",
         dateTo: "Novembre 2022",
+        duration: duration(new Date("2019-05-20"), new Date("2022-11-23")),
         icon: BriefcaseIcon
     },
     {
@@ -60,6 +93,7 @@ const experiences = ref([
         link: "https://www.maxinfoweb.com/",
         dateFrom: "Février 2017",
         dateTo: "Mai 2019",
+        duration: duration(new Date("2017-02-01"), new Date("2019-05-10")),
         icon: BriefcaseIcon
     },
 ])
