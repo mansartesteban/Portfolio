@@ -8,6 +8,9 @@ dependencies:
   '@heroicons/vue':
     specifier: ^2.1.5
     version: 2.1.5(vue@3.5.12)
+  '@mansartesteban/use-typing-animation':
+    specifier: ^1.0.0
+    version: 1.0.0
   '@mansartesteban/utils':
     specifier: ^1.0.0
     version: 1.0.0
@@ -335,6 +338,12 @@ packages:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
     dev: true
+
+  /@mansartesteban/use-typing-animation@1.0.0:
+    resolution: {integrity: sha512-jjLkBheuGHS/NWg3WdJQdT8cq1vTO4r8NEmMQPMW0gUi3o9+D9fspv5+R7uHioEQ+vdKJNSI4uFhyQ105eVO7w==}
+    dependencies:
+      '@mansartesteban/utils': 1.0.0
+    dev: false
 
   /@mansartesteban/utils@1.0.0:
     resolution: {integrity: sha512-6oQaHFg9glQQWW9DKoUXVjMlmTwjOdt7V9B0ULHky/AeCdgOq1USDiRMRXxDElT5dOHYJkxpDutb/9O5qI6GWQ==}
