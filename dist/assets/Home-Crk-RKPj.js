@@ -1,1 +1,0 @@
-import{_ as r,c as s,h as o,g as n,w as a,F as c,j as l,o as m}from"./index-BHjz-YFM.js";const _={};function f(u,e){const t=l("router-link");return m(),s(c,null,[e[1]||(e[1]=o(" Showcase home ! ")),n(t,{to:{name:"sc_sorts"}},{default:a(()=>e[0]||(e[0]=[o("Sorts")])),_:1})],64)}const i=r(_,[["render",f]]);export{i as default};

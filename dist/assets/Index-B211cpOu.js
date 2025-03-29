@@ -1,1 +1,0 @@
-import{_ as o,c,g as t,o as n,j as r}from"./index-BHjz-YFM.js";const s={},l={class:"blog flex flex-col gap-16 p-4 h-full flex-1 md:p-8 lg:p12 xl:p-16"};function _(a,p){const e=r("router-view");return n(),c("div",l,[t(e)])}const d=o(s,[["render",_]]);export{d as default};
