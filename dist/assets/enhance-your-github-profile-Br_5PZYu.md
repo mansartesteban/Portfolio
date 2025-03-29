@@ -2,11 +2,11 @@
 
 Si vous êtes développeur et que vous voulez gagner en visibilité, il est essentiel de soigner votre image et vos profils en ligne. Voyons ensemble comment rendre votre profil GitHub plus attrayant et professionnel.
 
-![](/src/assets/articles/article1/screen1.png)
+En parcourant GitHub, je suis tombé sur un profil qui a tout de suite attiré mon attention. En creusant un peu, j’ai découvert qu’il y avait plusieurs autres profils dans le même style. Leur secret ? Une présentation soignée grâce à un fichier Markdown totalement personnalisable. J'en ai donc profité pour appliquer ce principe à mon profil :
+
+![](/articles/article1/screen1.png)
 
 ## Exemples
-
-En parcourant GitHub, je suis tombé sur un profil qui a tout de suite attiré mon attention. En creusant un peu, j’ai découvert qu’il y avait plusieurs autres profils dans le même style. Leur secret ? Une présentation soignée grâce à un fichier Markdown totalement personnalisable.
 
 Voici quelques exemple de profils Github "améliorés"
 
@@ -26,7 +26,7 @@ Pour plus de profils et d'exemples, je vous suggère [ce repository Github](http
 
 1) Pour commencer rendez-vous sur la page de [création d'un repository](https://github.com/new) sur Github.
 
-2) Créez un repository **public** du même nom que votre compte. Renseignez simplement le même nom que sur le menu "owner" ![](/src/assets/articles/article1/screen2.png)
+2) Créez un repository **public** du même nom que votre compte. Renseignez simplement le même nom que sur le menu "owner" ![](/articles/article1/screen2.png)
 
 3) Créez un fichier `README.md` à la racine de ce repository et personnalisez-le comme bon vous semble !
 
