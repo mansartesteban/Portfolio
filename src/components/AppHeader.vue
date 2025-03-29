@@ -55,10 +55,10 @@ const navLinks = ref([
         title: "Expériences",
         to: "/career"
     },
-    // {
-    //     title: "Projet",
-    //     to: "/"
-    // },
+    {
+        title: "Showcase",
+        to: "/showcase"
+    },
     {
         title: "Blog",
         to: { name: 'ViewList' }
