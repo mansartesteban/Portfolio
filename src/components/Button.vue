@@ -1,6 +1,6 @@
 <template>
   <button
-    class="select-none"
+    class="select-none h-10 flex items-center justify-center"
     :class="computedBtnClasses"
   >
     <slot></slot>

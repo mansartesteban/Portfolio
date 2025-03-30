@@ -7,6 +7,7 @@ class RandomizeSort extends SortComponent {
   currentStep = 0;
 
   process() {
+    this.serie.numbers = [];
     for (let i = 0; i < this.serie.length; i++) {
       let data = {
         value: Math.floor(randomNumber(0, 10000)),

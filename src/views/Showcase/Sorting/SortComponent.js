@@ -49,13 +49,16 @@ class SortComponent {
 
   async play() {
     for (let i = 0; i < this.steps.length; i++) {
-      let nextResult = this.next();
-      console.log("next", nextResult);
+      this.next();
     }
   }
 
-  pause() {}
-  resume() {}
+  validate() {
+    for (let i = 0; i < this.serie.numbers.length; i++) {
+      this.saveStep("processing", { index: i });
+      this.saveStep("sorted", { index: i });
+    }
+  }
 }
 
 export default SortComponent;

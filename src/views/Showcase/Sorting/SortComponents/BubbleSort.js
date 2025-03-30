@@ -1,4 +1,3 @@
-import { validateSerie } from "../Helpers";
 import SortComponent from "../SortComponent";
 
 class BubbleSort extends SortComponent {
@@ -18,10 +17,7 @@ class BubbleSort extends SortComponent {
       this.saveStep("sorted", { index: j });
     }
 
-    for (let i = 0; i < this.serie.numbers.length; i++) {
-      this.saveStep("processing", { index: i });
-      this.saveStep("sorted", { index: i });
-    }
+    this.validate();
   }
 }
 

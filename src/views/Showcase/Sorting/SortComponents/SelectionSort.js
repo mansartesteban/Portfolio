@@ -34,11 +34,7 @@ class SelectionSort extends SortComponent {
     }
     this.saveStep("sorted", { index: this.serie.numbers.length - 1 });
 
-    for (let i = 0; i < this.serie.numbers.length; i++) {
-      this.serie.numbers[i].state = "unsorted";
-      this.saveStep("processing", { index: i });
-      this.saveStep("sorted", { index: i });
-    }
+    this.validate();
   }
 }
 

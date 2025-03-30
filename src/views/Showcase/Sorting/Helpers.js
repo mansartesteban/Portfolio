@@ -83,4 +83,9 @@ export const states = [
     color: "#e17b30",
     label: "En état de sauvegarde",
   },
+  {
+    name: "temp",
+    color: "#83239e",
+    label: "État temporaire",
+  },
 ];

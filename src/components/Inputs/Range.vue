@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center">
+  <div class="flex flex-col justify-center flex-1 w-full">
     <label
       v-if="label"
       for="default-range"
