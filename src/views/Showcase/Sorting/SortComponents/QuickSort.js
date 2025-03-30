@@ -4,6 +4,7 @@ class QuickSort extends SortComponent {
   process() {
     this.quickSortInPlace(this.serie.numbers);
 
+    console.log("ended");
     this.validate();
   }
 
@@ -12,7 +13,12 @@ class QuickSort extends SortComponent {
 
     const pivotIndex = this.partition(arr, start, end);
     this.quickSortInPlace(arr, start, pivotIndex - 1);
+    this.saveStep("sorted", { index: start });
+
     this.quickSortInPlace(arr, pivotIndex + 1, end);
+    if (pivotIndex + 1 < arr.length) {
+      this.saveStep("sorted", { index: pivotIndex + 1 });
+    }
   }
 
   partition(arr, start, end) {

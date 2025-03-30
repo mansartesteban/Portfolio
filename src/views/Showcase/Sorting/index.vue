@@ -204,6 +204,45 @@
           <li>⏱️ Lent sur grands tableaux désordonnés</li>
         </ul>
       </template>
+      <template v-else-if="activeSort.value === 'cocktail'">
+        <div class="text-primary text-2xl font-bold mt-4">
+          Tri Cockail Shaker (Cocktail Shaker Sort)
+        </div>
+        <div>
+          🔁 Tri à bulle amélioré avec un aller-retour à chaque itération
+        </div>
+        <div>
+          👉 Va de gauche à droite pour pousser les plus grands à droite
+        </div>
+        <div>
+          👈 Puis de droite à gauche pour pousser les plus petits à gauche
+        </div>
+        <div>🔃 Rétrécit les bornes à chaque tour (start++, end--)</div>
+        <div>🛑 Arrête dès qu’un aller-retour n’effectue aucun échange</div>
+        <h3 class="text-xl font-bold mt-4">Avantage et inconvénient</h3>
+        <div>👍 Avantages</div>
+        <ul>
+          <li>
+            🚀 Plus efficace que le tri à bulle dans certains cas (surtout quand
+            les plus petits sont coincés à gauche)
+          </li>
+          <li>🔁 Meilleure répartition des comparaisons dans le tableau</li>
+          <li>💡 Facile à comprendre et à implémenter</li>
+          <li>
+            📈 Peut détecter un tableau déjà trié rapidement grâce au flag
+            swapped
+          </li>
+        </ul>
+        <div>👎 Inconvénients</div>
+        <ul>
+          <li>🐌 Toujours O(n²) dans le pire des cas (comme le tri à bulle)</li>
+          <li>💭 Moins intuitif à lire que le bubble sort si on le découvre</li>
+          <li>
+            🔧 Pas utilisé en pratique pour de gros tableaux (remplacé par
+            quick/merge/tim sort)
+          </li>
+        </ul>
+      </template>
     </div>
   </div>
 </template>
@@ -211,7 +250,7 @@
 <script setup>
   import Button from "../../../components/Button.vue";
   import Range from "../../../components/Inputs/Range.vue";
-  import { getColor, getSize, playSound, sleep, states } from "./Helpers";
+  import { getColor, getSize, mapRange, sleep, states } from "./Helpers";
   import Serie from "./Serie";
   import BubbleSort from "./SortComponents/BubbleSort";
   import RandomizeSort from "./SortComponents/RandomizeSort";
@@ -227,6 +266,8 @@
     SpeakerXMarkIcon,
   } from "@heroicons/vue/16/solid";
   import InsertionSort from "./SortComponents/InsertionSort";
+  import CocktailSort from "./SortComponents/CocktailSort";
+  import AudioHandler from "../Utils/AudioHandler";
 
   const datas = ref([]);
   const serie = new Serie();
@@ -255,6 +296,11 @@
       value: "insertion",
       label: "Tri par insertion (insertion-sort)",
       sortComponent: InsertionSort,
+    },
+    {
+      value: "cocktail",
+      label: "Tri cocktail (cocktail-sort)",
+      sortComponent: CocktailSort,
     },
   ]);
 
@@ -326,14 +372,30 @@
     playing.value = false;
   };
 
+  const audioHandler = new AudioHandler(10);
+
   const animatedBars = ref();
   const animate = async (step) => {
-    if (step.type === "sorted") {
-      datas.value[step.step.index].state = "sorted";
-    } else if (step.type === "swap") {
+    if (step.type === "swap") {
       if (!muted.value) {
-        playSound(datas.value[step.step.indexA].value, serie);
-        playSound(datas.value[step.step.indexB].value, serie);
+        audioHandler.playSound(
+          mapRange(
+            datas.value[step.step.indexA].value,
+            serie.min,
+            serie.max,
+            200,
+            800
+          )
+        );
+        audioHandler.playSound(
+          mapRange(
+            datas.value[step.step.indexB].value,
+            serie.min,
+            serie.max,
+            200,
+            800
+          )
+        );
       }
       let indexA = step.step.indexA;
       let indexB = step.step.indexB;
@@ -357,21 +419,48 @@
         datas.value[indexA] = datas.value[indexB];
         datas.value[indexB] = tmp;
       });
+    } else if (step.type === "sorted") {
+      console.log("sorted", step.type, step, datas.value);
+      datas.value[step.step.index].state = "sorted";
     } else if (step.type === "processing") {
       datas.value[step.step.index].state = "processing";
       if (!muted.value) {
-        playSound(datas.value[step.step.index].value, serie);
+        audioHandler.playSound(
+          mapRange(
+            datas.value[step.step.index].value,
+            serie.min,
+            serie.max,
+            200,
+            800
+          )
+        );
       }
     } else if (step.type === "unsorted") {
       datas.value[step.step.index].state = "unsorted";
     } else if (step.type === "save") {
       if (!muted.value) {
-        playSound(datas.value[step.step.index].value, serie);
+        audioHandler.playSound(
+          mapRange(
+            datas.value[step.step.index].value,
+            serie.min,
+            serie.max,
+            200,
+            800
+          )
+        );
       }
       datas.value[step.step.index].state = "save";
     } else if (step.type === "temp") {
       if (!muted.value) {
-        playSound(datas.value[step.step.index].value, serie);
+        audioHandler.playSound(
+          mapRange(
+            datas.value[step.step.index].value,
+            serie.min,
+            serie.max,
+            200,
+            800
+          )
+        );
       }
       datas.value[step.step.index].state = "temp";
     }
