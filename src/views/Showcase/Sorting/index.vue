@@ -1,65 +1,70 @@
 <template>
   <div class="flex flex-col lg:flex-row gap-16">
     <div class="flex flex-col flex-1 items-center gap-16">
-      <div class="flex flex-row gap-4 items-end">
-        <Select
-          v-model="itemCount"
-          @change="onCountChange"
-          label="Nombre d'éléments"
-          class="w-32"
-          return-value="value"
-          :options="[5, 10, 20, 50, 100, 200]"
-        ></Select>
-        <Button
-          class="p-2 rounded text-gray-900"
-          color="error"
-          @click="setRandomizeSort"
-          >Mélanger</Button
-        >
-        <Button
-          class="p-2 rounded"
-          @click="playing ? pause() : play()"
-          ><PlayIcon
-            v-if="!playing"
-            style="width: 20px; height: 20px"
-          ></PlayIcon>
-          <PauseIcon
-            v-if="playing"
-            style="width: 20px; height: 20px"
-          ></PauseIcon
-        ></Button>
+      <div class="flex flex-col gap-4 items-center">
+        <div class="flex items-end gap-4">
+          <Select
+            v-model="itemCount"
+            @change="onCountChange"
+            label="Nombre d'éléments"
+            class="w-32"
+            return-value="value"
+            :options="[5, 10, 20, 50, 100, 200]"
+          ></Select>
+          <Button
+            class="p-2 rounded text-gray-900"
+            color="error"
+            @click="setRandomizeSort"
+            >Mélanger</Button
+          >
+        </div>
+        <!-- <div class="w-full md:w-0" ></div> -->
+        <div class="flex gap-4">
+          <Button
+            class="p-2 rounded"
+            @click="playing ? pause() : play()"
+            ><PlayIcon
+              v-if="!playing"
+              style="width: 20px; height: 20px"
+            ></PlayIcon>
+            <PauseIcon
+              v-if="playing"
+              style="width: 20px; height: 20px"
+            ></PauseIcon
+          ></Button>
 
-        <Button
-          class="p-2 rounded"
-          @click="prev"
-          ><BackwardIcon style="width: 20px; height: 20px"></BackwardIcon
-        ></Button>
-        <Button
-          class="p-2 rounded"
-          @click="next"
-          ><ForwardIcon style="width: 20px; height: 20px"></ForwardIcon
-        ></Button>
-        <Button
-          class="p-2 rounded"
-          @click="muted = !muted"
-        >
-          <SpeakerWaveIcon
-            v-if="!muted"
-            style="width: 20px; height: 20px"
-          ></SpeakerWaveIcon>
-          <SpeakerXMarkIcon
-            v-if="muted"
-            style="width: 20px; height: 20px"
-          ></SpeakerXMarkIcon>
-        </Button>
-        <Range
-          :label="`Vitesse: ${speed}`"
-          v-model="speed"
-          min="1"
-          max="100"
-          step="1"
-          class="w-32"
-        ></Range>
+          <Button
+            class="p-2 rounded"
+            @click="prev"
+            ><BackwardIcon style="width: 20px; height: 20px"></BackwardIcon
+          ></Button>
+          <Button
+            class="p-2 rounded"
+            @click="next"
+            ><ForwardIcon style="width: 20px; height: 20px"></ForwardIcon
+          ></Button>
+          <Button
+            class="p-2 rounded"
+            @click="muted = !muted"
+          >
+            <SpeakerWaveIcon
+              v-if="!muted"
+              style="width: 20px; height: 20px"
+            ></SpeakerWaveIcon>
+            <SpeakerXMarkIcon
+              v-if="muted"
+              style="width: 20px; height: 20px"
+            ></SpeakerXMarkIcon>
+          </Button>
+          <Range
+            :label="`Vitesse: ${speed}`"
+            v-model="speed"
+            min="1"
+            max="100"
+            step="1"
+            class="w-32"
+          ></Range>
+        </div>
       </div>
 
       <div class="flex gap-1 h-64 overflow-x-auto w-full">
@@ -81,7 +86,7 @@
           </div>
         </template>
       </div>
-      <div class="flex items-center gap-8">
+      <div class="flex flex-wrap items-center justify-between gap-8">
         <div
           v-for="state in states"
           class="flex items-center gap-2"
@@ -95,7 +100,7 @@
       </div>
     </div>
     <div
-      class="p-12 w-1/4 flex flex-col gap-3 shadow-xl shadow-[rgba(0,0,0,.25)] rounded-3xl bg-slate-800"
+      class="p-12 md:w-1/4 flex flex-col gap-3 shadow-xl shadow-[rgba(0,0,0,.25)] rounded-3xl bg-slate-800"
     >
       <Select
         v-model="activeSort"

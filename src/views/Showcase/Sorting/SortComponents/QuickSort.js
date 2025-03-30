@@ -32,7 +32,7 @@ class QuickSort extends SortComponent {
 
     [arr[i], arr[end]] = [arr[end], arr[i]]; // place le pivot au bon endroit
     this.saveStep("swap", { indexA: i, indexB: end });
-    this.saveStep("unsorted", { index: i });
+    this.saveStep("sorted", { index: i });
     return i;
   }
 }
