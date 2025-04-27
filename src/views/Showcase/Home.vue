@@ -27,10 +27,23 @@
         class="hover:bg-slate-200/20 transition-all"
       ></Card>
     </a>
+    <a
+      href="https://pitaya-book.vercel.app/"
+      target="_blank"
+    >
+      <Card
+        title="Pitaya-Inc Book"
+        cta-label="Voir"
+        text="Mon book de photographe. Un site vitrine que j'ai développé pour présenter mes photos et mes prestations de photographe."
+        :img="PitayaBookImg"
+        class="hover:bg-slate-200/20 transition-all"
+      ></Card>
+    </a>
   </div>
 </template>
 
 <script setup>
   import SortsImg from "@/assets/images/showcase/home_sorts.png";
   import PereNoelDeBeauvaisImg from "@/assets/images/showcase/home_pere_noel_de_beauvais.png";
+  import PitayaBookImg from "@/assets/images/showcase/home_pitaya_book.png";
 </script>
